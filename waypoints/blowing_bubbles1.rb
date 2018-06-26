@@ -1,7 +1,7 @@
 array = ['e', 'a', 'c', 'b', 'd']
 times_bubbled = 0
 
-while times_bubbled < array.length
+array.length.times do |letter|
   left_index  = 0
   right_index = 1
 
