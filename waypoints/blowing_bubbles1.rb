@@ -6,8 +6,7 @@ array.length.times do |i|
     left  = array[i]
     right = array[i + 1]
     if right < left
-      array[i] = right
-      array[i + 1] = left
+      array[i], array[i + 1] = right, left
     end
   end
 
