@@ -3,9 +3,8 @@ times_bubbled = 0
 
 array.length.times do |i|
   (array.length - 1).times do |i|
-    left = array[i]
-    if array[i + 1] < left
-      array[i], array[i + 1] = array[i + 1], left
+    if array[i + 1] < array[i]
+      array[i], array[i + 1] = array[i + 1], array[i]
     end
   end
 
