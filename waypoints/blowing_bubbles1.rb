@@ -1,6 +1,7 @@
 array = ['e', 'a', 'c', 'b', 'd']
 
-array.length.times do |i|
+times_bubbled = 0
+while times_bubbled < array.length do
   left_index  = 0
   right_index = 1
   while right_index < array.length do
@@ -14,6 +15,7 @@ array.length.times do |i|
     left_index += 1
     right_index += 1
   end
+  times_bubbled += 1
 end
 
 p array # => ["a", "b", "c", "d", "e"]
