@@ -1,14 +1,18 @@
 array = ['e', 'a', 'c', 'b', 'd']
 
 array.length.times do |i|
+  left_index  = 0
+  right_index = 1
   (array.length - 1).times do |i|
-    left = i
-    right = i + 1
-    if array[right] < array[left]
-      left_letter = array[left]
-      array[left] = array[right]
-      array[right] = left_letter
+    left  = array[left_index] # e
+    right = array[right_index] # a
+    if right < left
+      left_letter = left
+      array[left_index] = right
+      array[right_index] = left_letter
     end
+    left_index += 1
+    right_index += 1
   end
 end
 
